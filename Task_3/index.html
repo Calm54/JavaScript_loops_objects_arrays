@@ -8,7 +8,27 @@
   </head>
   <body>    
     <script>
+      let userInput = prompt('food name?')
+      const food = ['rice', 'spaghetti', 'potatoe', 'cake'];
+
+     /* for (let i = 0; i < food.length; i++) {
+        console.log(`array position = ${i} contains ${food[i]}`);
+      }
+    */
     
+    /*
+    for (const fav of food) {
+        console.log(food);
+      }
+      */
+
+      for (const fav of food) {
+        if (fav === 'rice') {
+          console.log('Already here');
+        } else {
+          console.log(`Not an ${userInput} in sight`)
+        }
+      }
     </script>
   </body>
 </html>
