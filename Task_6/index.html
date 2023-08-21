@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <title>Rask 6 - Takeaway Task</title>
+  </head>
+  <body>
+    <script>
+      // Think how you could expand on this idea i.e. delete items, add more than one fruit, etc....
+      const arrFruitPerDay = [
+        { fruit: 'apple', quantity: 2 },
+        { fruit: 'pear', quantity: 1 },
+      ];
+
+      let totalFruits = 0, totalQTY = 0
+      const fruit = prompt("Please enter fruit?");
+      const qty = +prompt("Please enter quantity eaten?");
+      console.log(fruit, qty);
+
+      if (arrFruitPerDay.some(f => f.fruit.toLowerCase() === fruit.toLowerCase())) {
+        arrFruitPerDay.map((f) => {
+          if (f.fruit.toLowerCase() === fruit.toLowerCase()) {
+            f.quantity += qty
+          }
+          return f
+        })
+      } else {
+        arrFruitPerDay.push(
+          { fruit: fruit, quantity: qty }
+        )
+      }
+
+      console.log(arrFruitPerDay)
+
+      for (let i = 0; i < arrFruitPerDay.length; i++) {
+        totalQTY += +arrFruitPerDay[i].quantity;
+      }
+
+      totalFruits = arrFruitPerDay.length
+
+      alert(`I have eaten ${totalFruits} types of fruit with a total quantity of ${totalQTY} today.`);
+    </script>
+  </body>
+</html>
