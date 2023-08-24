@@ -9,6 +9,23 @@
   <body>    
     <script>
     
+    const recipe = {
+      title: 'Cake',
+      servings: 1,
+      ingredients: ['flour', 'sugar', 'eggs', 'butter'],
+      directions: [
+        'Mix all dry ingredients together',
+        'Mix all wet ingrdients together',
+        'Mix both wet and dry together and put in a pan',
+        'Place in an Oven and bake for 20mins at 105',
+      ]
+    
+    }
+      function letsCook(recipe) {
+        console.log(`I'm hungry! Let's make ${recipe.title}.`);
+      }
+
+      letsCook(recipe);
     </script>
   </body>
 </html>
